@@ -54,7 +54,7 @@ Generating device specific keys so it will be useless if someone shares your .pl
 
 Copyright
 =======================
-This project is based on Stephen `sdarlington`[sdarlington](https://github.com/sdarlington "sdarlington") Darlington's SDCloudUserDefaults [SDCloudUserDefaults](https://github.com/sdarlington/SDCloudUserDefaults "SDCloudUserDefaults") project yet it does not support iClouds but it's coming soon. 
+This project is based on Stephen [sdarlington](https://github.com/sdarlington "'sdarlington'") Darlington's SDCloudUserDefaults [SDCloudUserDefaults](https://github.com/sdarlington/SDCloudUserDefaults "SDCloudUserDefaults") project yet it does not support iClouds but it's coming soon. 
 
 ```
 /*
