@@ -1,20 +1,20 @@
 EncryptedNSUserDefaults
 =======================
 
-EncryptedNSUserDefaults provides more security to your default NSUserDefaults. Please **do not** use EncryptedNSUserDefaults to save vital information like user passwords. You should use KeyChainAccess instead.
+EncryptedNSUserDefaults provides more security to your default NSUserDefaults. Please **do not** use EncryptedNSUserDefaults to save vital information like user passwords. You should use Keychain Access instead.
 
 At the moment the following types are supported:
 
-NSString 
-NSData
-NSInteger
-NSArray
-NSMutableArray
-NSDictionary
-NSMutableDictionary
-BOOL
-double
-float
+NSString, 
+NSData,
+NSInteger,
+NSArray,
+NSMutableArray,
+NSDictionary,
+NSMutableDictionary,
+BOOL,
+double,
+float,
 int
 
 
