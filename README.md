@@ -1,12 +1,13 @@
 EncryptedNSUserDefaults
 =======================
 
-EncryptedNSUserDefaults provides more security to your default NSUserDefaults. Please **do not** use EncryptedNSUserDefaults to save vital information like user passwords. You should use Keychain Access instead.
+EncryptedNSUserDefaults provides more security to default NSUserDefaults. Both ***ARC*** and ***MRC*** supported. Please **do not** use EncryptedNSUserDefaults to save vital information like user passwords. You should use Keychain Access instead.
 
 At the moment the following types are supported:
 
 NSString, 
 NSData,
+NSMutableData,
 NSInteger,
 NSArray,
 NSMutableArray,
