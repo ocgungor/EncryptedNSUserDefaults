@@ -41,6 +41,7 @@
 + (void) setKey:(NSString *)key;
 
 +(NSString*)stringForKey:(NSString*)aKey;
++(NSMutableString*)mutableStringForKey:(NSString*)aKey;
 +(BOOL)boolForKey:(NSString*)aKey;
 +(id)objectForKey:(NSString*)aKey;
 +(NSInteger)integerForKey:(NSString*)aKey;
@@ -55,6 +56,7 @@
 +(NSMutableDictionary*)mutableDictionaryForKey:(NSString*)aKey;
 
 +(void)setString:(NSString*)aString forKey:(NSString*)aKey;
++(void)setMutableString:(NSMutableString*)aString forKey:(NSString*)aKey;
 +(void)setBool:(BOOL)aBool forKey:(NSString*)aKey;
 +(void)setObject:(id)anObject forKey:(NSString*)aKey;
 +(void)setData:(NSData*)aData forKey:(NSString*)aKey;
@@ -65,7 +67,6 @@
 +(void)setInt:(int)anInt forKey:(NSString*)aKey ;
 +(void)setArray:(NSArray*)anArray forKey:(NSString*)aKey;
 +(void)setMutableArray:(NSMutableArray*)anArray forKey:(NSString*)aKey;
-
 +(void)setDictionary:(NSDictionary*)aDictionary forKey:(NSString*)aKey;
 +(void)setMutableDictionary:(NSMutableDictionary*)aDictionary forKey:(NSString*)aKey;
 

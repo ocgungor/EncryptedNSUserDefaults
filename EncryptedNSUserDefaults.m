@@ -70,6 +70,14 @@ static NSString *_key = nil;
 #endif
 }
 
++(NSMutableString*)mutableStringForKey:(NSString*)aKey{
+#if __has_feature(objc_arc) && __clang_major__ >= 3
+    return (NSMutableString *) [[[NSString alloc] initWithData:[[EncryptedNSUserDefaults objectForKey:aKey] DecryptAES] encoding:NSUTF8StringEncoding] mutableCopy];
+#else
+    return (NSMutableString *) [[[[NSString alloc] initWithData:[[EncryptedUserDefaults objectForKey:aKey] DecryptAES] encoding:NSUTF8StringEncoding] mutableCopy] autorelease];
+#endif
+}
+
 +(BOOL)boolForKey:(NSString*)aKey {  
   
 #if __has_feature(objc_arc) && __clang_major__ >= 3
@@ -174,6 +182,11 @@ static NSString *_key = nil;
 
 +(void)setString:(NSString*)aString forKey:(NSString*)aKey {
     [EncryptedNSUserDefaults setObject:[[aString dataUsingEncoding:NSUTF8StringEncoding] EncryptAES] forKey:aKey];
+}
+
+
++(void)setMutableString:(NSMutableString*)aString forKey:(NSString*)aKey{
+    [EncryptedNSUserDefaults setObject:[[[NSString stringWithString:aString] dataUsingEncoding:NSUTF8StringEncoding] EncryptAES] forKey:aKey];
 }
 
 +(void)setBool:(BOOL)aBool forKey:(NSString*)aKey {
